@@ -9,3 +9,14 @@ const info = {
     langtitude: 32.1234123,
     longtitude: 127.29874187
 };
+// jeju info object를 활용한 spread 연산자 구현
+
+const lastName = 'james';
+
+const user = {
+    companyName: 'google',
+    job: 'programmer',
+    ...(lastName === 'james' && { lastName }) //lastName이 james일때만 object를 넣어줌
+};
+
+console.log(user);
