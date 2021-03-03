@@ -15,13 +15,15 @@
 // start();
 
 const sleep = t => {
-    return new Promise(resolve => setTimeout(resolve, t));
+    return setTimeout(() => t);
+    // return new Promise(resolve => setTimeout(resolve, t));
 };
 
 function start() {
     const startDateTime = new Date().getTime();
-    for (let i = 1; i <= 5; i++) {
-        sleep(1000);
+
+    for (let i = 0; i < 1000000; i++) {
+        // sleep(1000);
         console.log(i);
     }
     const endDateTime = new Date().getTime();
