@@ -5,33 +5,26 @@
 
 // 서버 응답에서 만약 response에서 notification가 없다는 최악의 상황을 가정해보자.
 const response = {
-  //   notifications: {
-  //     follow: true,
-  //     alerts: true,
-  //     unfollow: false
-  //   },
+  notifications: {
+    follow: true,
+    alerts: true,
+    unfollow: false
+  },
   user: {
     lastName: 'park'
-  }
+  },
+  test: {},
+  test2: {}
 };
 
 // 팔로우가 true 일 때, 이메일을 보낸다고 할 때,
 // 1. json depth가 길어지면 복잡해서 가독성이 떨어짐.
 // 2. follow object의 follow가 없으면 undefined 참조 에러가 발생한다.
-if (response.notifications.follow) {
-  console.log('sending email...');
-} else {
-  console.log('not follow or server problem');
-}
-
-// 일반적인 follow 유무 체크
-const follow =
-  response.notifications === undefined ? false : response.notifications.follow;
-if (follow) {
-  console.log('sending email...');
-} else {
-  console.log('not follow or server problem');
-}
+// if (response.notifications.follow) {
+//   console.log('sending email...');
+// } else {
+//   console.log('not follow or server problem');
+// }
 
 // 디스트럭처링을 통한 follow 개선
 const {

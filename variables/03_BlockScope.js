@@ -10,20 +10,21 @@
 
 const canStatus = true;
 if (canStatus) {
-    let name = 'boot';
+  var name = 'boot';
 }
+test();
 // 전역에서 지역변수에서 선언된 변수를 참조가 불가능 (블록스코프)
-// console.log(name); ReferenceError: name is not defined
+console.log(name); // ReferenceError: name is not defined
 
-if (canStatus) {
-    var sayHello = '안녕하세요';
-}
-console.log(sayHello); // undefined error가 발생해야하는데  함수스코프이기 때문에 안녕하세요가 로그에 찍힌다.
+// if (canStatus) {
+//   var sayHello = '안녕하세요';
+// }
+// console.log(sayHello); // undefined error가 발생해야하는데  함수스코프이기 때문에 안녕하세요가 로그에 찍힌다.
 
-/**
- * var 변수는 BlockScope가 아닌 함수스코프
- */
-function say() {
-    var sayBye = '안녕히가세요';
-}
+// /**
+//  * var 변수는 BlockScope가 아닌 함수스코프
+//  */
+// function say() {
+//   var sayBye = '안녕히가세요';
+// }
 // console.log(sayBye);

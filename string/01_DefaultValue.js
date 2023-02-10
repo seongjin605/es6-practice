@@ -4,10 +4,10 @@
  * @param {*} name
  */
 function sayHello(name) {
-    // if로 name값이 없을 때, undefined 체크하는 방식이 아님.
-    // if(name === undefined) ... X
-    return 'Hello' + (name || 'Google');
+  // if로 name값이 없을 때, undefined 체크하는 방식이 아님.
+  // return name === undefined ? 'Hello google' : 'Hello Meta';
+  return 'Hello' + (name || 'Google');
 }
 
 // sayHello() 호출함수에 파라미터를 넣지않고 위 함수를 다양한 방법으로 조작하여 처리.
-console.log(sayHello());
+console.log(sayHello('Test'));

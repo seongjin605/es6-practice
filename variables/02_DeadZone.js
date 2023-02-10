@@ -1,5 +1,5 @@
-console.log(helloWorld);
-var helloWorld = 'HELLO WORLD';
+// console.log(helloWorld);
+// var helloWorld = 'HELLO WORLD';
 
 /**
  * undefined가 떨어지는 이유는 호이스팅 때문에 발생한다.
@@ -19,15 +19,15 @@ var helloWorld = 'HELLO WORLD';
 // console.log(blabla);
 // let blabla = 'blabla';
 
-printYourName1();
+// printYourName1();
 printYourName2();
 
 // 함수 표현식
-var printYourName1 = function() {
-    console.log('마틴파울러');
+var printYourName1 = function () {
+  console.log('마틴파울러');
 };
 
 // 함수 선언문
 function printYourName2() {
-    console.log('폰노이만');
+  console.log('폰노이만');
 }
